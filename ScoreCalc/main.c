@@ -1,3 +1,6 @@
+// 학점 계산기 프로그램
+// 3주차 과제 (1)
+
 #include <stdio.h>
 
 int SCORE = 0;
