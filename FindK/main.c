@@ -1,5 +1,5 @@
 // K 찾기
-// 3주차 과제
+// 3주차 과제 (2)
 
 #include <stdio.h>
 #define SIZE 500000
