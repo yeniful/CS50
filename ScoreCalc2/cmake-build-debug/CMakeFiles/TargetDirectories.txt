@@ -1,0 +1,3 @@
+/Users/yeni/CLionProjects/ScoreCalc2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/yeni/CLionProjects/ScoreCalc2/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/yeni/CLionProjects/ScoreCalc2/cmake-build-debug/CMakeFiles/ScoreCalc2.dir
