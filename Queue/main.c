@@ -1,3 +1,6 @@
+// 큐 규현
+// 3주차 과제 (3)
+
 #include <stdio.h>
 #include <string.h>
 
