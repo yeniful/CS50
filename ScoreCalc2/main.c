@@ -1,47 +1,41 @@
+// 학점 계산기 프로그램_array
+// 3주차 과제 (1)-2
+
 #include <stdio.h>
 
+// 배열로 구현하면 점수 기준을 수정할 때 용이함.
+
+const int LEVEL = 9; // 성적 구간 개수
+const int SCORES[LEVEL] = {95, 90, 85, 80, 75, 70, 65, 60, 0}; // 성적 기준
+const char *GRADES[LEVEL] = {"A+", "A", "B+", "B", "C+", "C", "D+", "D", "F"}; // 성적 구간
 int SCORE = 0;
-char *GRADE = "";
-int scoreCheck(int n);
 const int CODE_EXIT = 999;
+int score_to_grade(int n);
+
 int main() {
     printf("학점 프로그램\n종료를 원하면 \"999\"를 입력\n");
     printf("[학점 테이블]\n 점수 : 95  90  85  80  75  70  65  60  0\n");
     printf(" 학점 : A+  A   B+  B   C+  C   D+  D   F\n");
-    printf("성적을 입력하세요.\n");
     while(SCORE != CODE_EXIT){
+        printf("점수 입력하세요. (1 ~ 100) : ");
         scanf("%d", &SCORE);
-        scoreCheck(SCORE);}
+        score_to_grade(SCORE);}
 }
 
-int scoreCheck(int n){
+int score_to_grade(int n){
     if (n == CODE_EXIT){
         printf("학점 프로그램을 종료합니다.\n");
+        return 0;
     } else if((n > 100)||(n < 0)){
-        printf("** %d 성적을 올바르게 입력하세요. 범위는 0 ~ 100 입니다.\n", n );
+        printf("** %d 점수 올바르게 입력하세요. 범위는 0 ~ 100 입니다.\n", n );
+        return 1;
     }
     else {
-        if((n >= 95)){
-            GRADE = "A+";
-        } else if ((n >= 90) && (n < 95)){
-            GRADE = "A";
-        } else if ((n >= 85) && (n < 90)){
-            GRADE = "B+";
-        } else if ((n >= 80) && (n < 85)){
-            GRADE = "B";
-        } else if ((n >= 75) && (n < 80)){
-            GRADE = "C+";
-        } else if ((n >= 70) && (n < 75)){
-            GRADE = "C";
-        } else if ((n >= 65) && (n < 70)){
-            GRADE = "D+";
-        } else if ((n >= 60) && (n < 65)){
-            GRADE = "D";
-        } else{
-            GRADE = "F";
+        for (int i = 0 ; i < LEVEL ; i++){
+            if (SCORES[i] < SCORE){
+                printf("성적은 %s 입니다.\n", GRADES[i]);
+                break;
+            }
         }
-        printf("%s\n",GRADE);
-
     }
-    return 0;
 }
