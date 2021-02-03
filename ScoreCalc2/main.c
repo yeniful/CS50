@@ -1,5 +1,6 @@
 // 학점 계산기 프로그램_array
 // 3주차 과제 (1)-2
+// if문 대신에 배열로 구현하면 값 수정하기 쉬움.
 
 #include <stdio.h>
 
@@ -17,7 +18,7 @@ int main() {
     printf("[학점 테이블]\n 점수 : 95  90  85  80  75  70  65  60  0\n");
     printf(" 학점 : A+  A   B+  B   C+  C   D+  D   F\n");
     while(SCORE != CODE_EXIT){
-        printf("점수 입력하세요. (1 ~ 100) : ");
+        printf("점수 입력하세요. (0 ~ 100) : ");
         scanf("%d", &SCORE);
         score_to_grade(SCORE);}
 }

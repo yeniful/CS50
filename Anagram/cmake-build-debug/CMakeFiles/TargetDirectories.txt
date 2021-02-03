@@ -1,0 +1,3 @@
+/Users/yeni/CLionProjects/Anagram/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/yeni/CLionProjects/Anagram/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/yeni/CLionProjects/Anagram/cmake-build-debug/CMakeFiles/Anagram.dir
