@@ -11,7 +11,7 @@ int second_nums[5] = {0, };
 int nums_split(int a, int b[]); // 정수 a를 자릿수로 쪼개어 정수형 배열 b의 원소로 할당.
 int nums_sort(int arr[]); // 버블 정렬
 // int nums_print(int arr[]); sort 확인용 출력 함수
-int check_match(char a[], char b[]); // 정수형 배열 a와 b의 원소가 같은지 확인.
+int check_match(int a[], int b[]); // 정수형 배열 a와 b의 원소가 같은지 확인.
 
 int main() {
     scanf("%d%d", &first_num, &second_num);
@@ -64,7 +64,7 @@ int nums_print(int arr[]){
 }
 */
 
-int check_match(char a[], char b[]){
+int check_match(int a[], int b[]){
     int i = 0;
     for (; i < SIZE; ) {
         if (a[i] == b[i]){
@@ -72,5 +72,5 @@ int check_match(char a[], char b[]){
         }
         else { printf("False"); return 1; }
     }
-    if ( i == SIZE ){ printf("True"); }
+    printf("True");
 }
